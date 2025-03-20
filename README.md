@@ -1,3 +1,7 @@
+## Note
+Trong example.env có ví dụ để tạo các biến môi trường vào và tạo .env đầy đủ thông tin để có thể chạy dự án
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
