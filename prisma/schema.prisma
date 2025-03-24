@@ -24,16 +24,18 @@ model binh_luan {
 }
 
 model dat_phong {
-  id             Int         @id @default(autoincrement())
+  id             Int                  @id @default(autoincrement())
   ma_phong       Int?
-  ngay_den       DateTime?   @db.Timestamp(0)
-  ngay_di        DateTime?   @db.Timestamp(0)
+  ngay_den       DateTime?            @db.Timestamp(0)
+  ngay_di        DateTime?            @db.Timestamp(0)
   so_luong_khach Int?
   ma_nguoi_dat   Int?
-  created_at     DateTime?   @default(now()) @db.Timestamp(0)
-  updated_at     DateTime?   @default(now()) @db.Timestamp(0)
-  phong          phong?      @relation(fields: [ma_phong], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "dat_phong_ibfk_1")
-  nguoi_dung     nguoi_dung? @relation(fields: [ma_nguoi_dat], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "dat_phong_ibfk_2")
+  created_at     DateTime?            @default(now()) @db.Timestamp(0)
+  updated_at     DateTime?            @default(now()) @db.Timestamp(0)
+  trang_thai     dat_phong_trang_thai @default(cho_thanh_toan)
+  order_id       String?              @unique(map: "order_id") @db.VarChar(50)
+  phong          phong?               @relation(fields: [ma_phong], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "dat_phong_ibfk_1")
+  nguoi_dung     nguoi_dung?          @relation(fields: [ma_nguoi_dat], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "dat_phong_ibfk_2")
 
   @@index([ma_nguoi_dat], map: "ma_nguoi_dat")
   @@index([ma_phong], map: "ma_phong")
@@ -94,4 +96,11 @@ model vi_tri {
   created_at DateTime? @default(now()) @db.Timestamp(0)
   updated_at DateTime? @default(now()) @db.Timestamp(0)
   phong      phong[]
+}
+
+enum dat_phong_trang_thai {
+  cho_thanh_toan
+  da_thanh_toan
+  that_bai
+  da_huy
 }

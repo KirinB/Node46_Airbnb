@@ -11,6 +11,7 @@ import {
 import { RoomBookingService } from './room-booking.service';
 import { CreateRoomBookingDto } from './dto/create-room-booking.dto';
 import { UpdateRoomBookingDto } from './dto/update-room-booking.dto';
+import { Public } from 'src/common/decorators/is-public.decorator';
 
 @Controller('room-booking')
 export class RoomBookingController {
@@ -57,5 +58,21 @@ export class RoomBookingController {
       +pageSize,
       search,
     );
+  }
+  @Post('/momo/')
+  paymentMomo(@Body() body: any) {
+    return this.roomBookingService.paymentMomo(body);
+  }
+
+  @Public()
+  @Post('callback')
+  callbackMomo(@Body() body: any) {
+    console.log(body);
+    return this.roomBookingService.callbackMomo(body);
+  }
+
+  @Post('/transaction-status/')
+  transactionStatusMomo(@Body() body: any) {
+    return this.roomBookingService.transactionStatusMomo(body);
   }
 }

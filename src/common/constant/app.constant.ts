@@ -16,6 +16,9 @@ export const FACEBOOK_APP_ID = process.env.FACEBOOK_APP_ID;
 export const FACEBOOK_APP_SECRET = process.env.FACEBOOK_APP_SECRET;
 export const FACEBOOK_CALLBACK_URL = process.env.FACEBOOK_CALLBACK_URL;
 
+export const ACCESS_KEY_MOMO = process.env.ACCESS_KEY_MOMO;
+export const SECRET_KEY_MOMO = process.env.SECRET_KEY_MOMO as string;
+
 export const REGEX_EMAIL =
   /(?=^[a-z0-9.]+@[a-z0-9.-]+\.[a-zA-Z]{2,6}$)(?=^.{1,40}$)/i;
 
