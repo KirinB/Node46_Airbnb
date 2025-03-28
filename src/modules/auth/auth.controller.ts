@@ -17,6 +17,10 @@ import { Public } from 'src/common/decorators/is-public.decorator';
 import { RegisterDto } from './dto/register-auth.dto';
 import { AuthGuard } from '@nestjs/passport';
 import { ApiExcludeEndpoint } from '@nestjs/swagger';
+import { MailerService } from '@nestjs-modules/mailer';
+import { ActiveAuthDto } from './dto/active-auth.dto';
+import { ForgotPasswordDto } from './dto/forgot-password-auth.dto';
+import { ResetPasswordDto } from './dto/reset-password-auth.dto';
 
 @Public()
 @Controller('auth')
@@ -43,5 +47,20 @@ export class AuthController {
   @ApiExcludeEndpoint()
   facebookLoginCallback(@Req() req: any) {
     return req.user;
+  }
+
+  @Post('active-account')
+  activeAccount(@Body() activeAccountDto: ActiveAuthDto) {
+    return this.authService.activeAccount(activeAccountDto);
+  }
+
+  @Post('forgot-password')
+  forgotPassword(@Body() forgotPasswordDto: ForgotPasswordDto) {
+    return this.authService.forgotPassword(forgotPasswordDto);
+  }
+
+  @Post('reset-password')
+  resetPassword(@Body() resetPasswordDto: ResetPasswordDto) {
+    return this.authService.resetPassword(resetPasswordDto);
   }
 }
