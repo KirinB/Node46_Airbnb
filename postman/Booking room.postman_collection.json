@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "7872ea0d-dc52-4695-aec8-3e461330e8dc",
+		"name": "Booking room",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40537877"
+	},
+	"item": [
+		{
+			"name": "Create booking room",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken\n}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ma_phong\" : 1,\n    \"ngay_den\" : \"2024-03-16T12:30:00Z\",\n    \"ngay_di\" : \"2024-03-16T12:30:00Z\",\n    \"so_luong_khach\" : 3,\n    \"ma_nguoi_dat\":1\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/room-booking/",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"room-booking",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list booking room",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0MTg4NjUyNCwiZXhwIjoxNzQxOTcyOTI0fQ.NzFox9v-HsCEhF0islloPu6Crit45k8Z9Yo64gwHo24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/room-booking/",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"room-booking",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get booking room by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0MTg4NjUyNCwiZXhwIjoxNzQxOTcyOTI0fQ.NzFox9v-HsCEhF0islloPu6Crit45k8Z9Yo64gwHo24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/room-booking/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"room-booking",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update booking room by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0MTg4NjUyNCwiZXhwIjoxNzQxOTcyOTI0fQ.NzFox9v-HsCEhF0islloPu6Crit45k8Z9Yo64gwHo24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ma_phong\" : 1,\n    \"ngay_den\" : \"2024-03-14T12:30:00Z\",\n    \"ngay_di\" : \"2024-03-14T12:30:00Z\",\n    \"so_luong_khach\" : 4,\n    \"ma_nguoi_dat\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/room-booking/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"room-booking",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete booking room by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0MTg4NjUyNCwiZXhwIjoxNzQxOTcyOTI0fQ.NzFox9v-HsCEhF0islloPu6Crit45k8Z9Yo64gwHo24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/room-booking/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"room-booking",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get booking room by user id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0MTk3ODcwMCwiZXhwIjoxNzQyMDY1MTAwfQ.Z7-I7o_iyx3jmfTW0doACPJULz-8hxaMeOWBQ1Jdmks",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/room-booking/lay-theo-nguoi-dung/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"room-booking",
+						"lay-theo-nguoi-dung",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment with MOMO",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken\n}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"redirectUrl\" : \"https://google.com\",\n    \"roomId\" : \"1\",\n    \"startDay\": \"2024-03-16T12:30:00Z\",\n    \"endDay\" : \"2024-03-16T12:30:00Z\",\n    \"userId\" : \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/room-booking/momo",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"room-booking",
+						"momo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction status Momo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken\n}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orderId\": \"MOMO1742766744264\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/room-booking/transaction-status/",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"room-booking",
+						"transaction-status",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "85bbb02c-ea75-4494-a59a-a810b672c3b9",
+		"name": "Comment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40537877"
+	},
+	"item": [
+		{
+			"name": "Create comment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0MTg4NjUyNCwiZXhwIjoxNzQxOTcyOTI0fQ.NzFox9v-HsCEhF0islloPu6Crit45k8Z9Yo64gwHo24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ma_phong\": 1,\n  \"ma_nguoi_binh_luan\": 2,\n  \"ngay_binh_luan\": \"2024-03-14T12:30:00Z\",\n  \"noi_dung\": \"Bình luận rất tốt!\",\n  \"sao_binh_luan\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/comment/",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"comment",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list comment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0MjI1MTYzNywiZXhwIjoxNzQyMzM4MDM3fQ.5c6bxaUzMuTfZ6ZtoZoIKyYZHvI9m--Lr1YOnd_Oh9U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/comment/",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"comment",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get comment by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0MTg4NjUyNCwiZXhwIjoxNzQxOTcyOTI0fQ.NzFox9v-HsCEhF0islloPu6Crit45k8Z9Yo64gwHo24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/comment/3",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"comment",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update comment by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0MTg4NjUyNCwiZXhwIjoxNzQxOTcyOTI0fQ.NzFox9v-HsCEhF0islloPu6Crit45k8Z9Yo64gwHo24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ma_phong\": 1,\n  \"ma_nguoi_binh_luan\": 2,\n  \"ngay_binh_luan\": \"2024-03-14T12:30:00Z\",\n  \"noi_dung\": \"hahahahaa!\",\n  \"sao_binh_luan\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/comment/4",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"comment",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete comment by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0MTg4NjUyNCwiZXhwIjoxNzQxOTcyOTI0fQ.NzFox9v-HsCEhF0islloPu6Crit45k8Z9Yo64gwHo24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/comment/4",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"comment",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get comment by id room",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0MTg4NjUyNCwiZXhwIjoxNzQxOTcyOTI0fQ.NzFox9v-HsCEhF0islloPu6Crit45k8Z9Yo64gwHo24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/comment/lay-binh-luan-theo-phong/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"comment",
+						"lay-binh-luan-theo-phong",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

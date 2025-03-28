@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "416aab56-666f-455c-abb4-54dbcbc499a7",
+		"name": "Location",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40537877"
+	},
+	"item": [
+		{
+			"name": "Get list location",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0MTg4NjUyNCwiZXhwIjoxNzQxOTcyOTI0fQ.NzFox9v-HsCEhF0islloPu6Crit45k8Z9Yo64gwHo24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/location/",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"location",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create location",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0MTg4NjUyNCwiZXhwIjoxNzQxOTcyOTI0fQ.NzFox9v-HsCEhF0islloPu6Crit45k8Z9Yo64gwHo24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ten_vi_tri\":\"Ho Chi Minh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/location/",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"location",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get location by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0MTg4NjUyNCwiZXhwIjoxNzQxOTcyOTI0fQ.NzFox9v-HsCEhF0islloPu6Crit45k8Z9Yo64gwHo24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/location/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"location",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update location by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0MTg4NjUyNCwiZXhwIjoxNzQxOTcyOTI0fQ.NzFox9v-HsCEhF0islloPu6Crit45k8Z9Yo64gwHo24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"ten_vi_tri\" : \"Hồ Chí Minh\",\n    \"quoc_gia\": 84,\n    \"tinh_thanh\" : \"Hồ chí minh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/location/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"location",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete location by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0MTg4NjUyNCwiZXhwIjoxNzQxOTcyOTI0fQ.NzFox9v-HsCEhF0islloPu6Crit45k8Z9Yo64gwHo24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/location/3",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"location",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pagniation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken\n}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/location/phan-trang-tim-kiem?page=1&pageSize=5&search=H",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"location",
+						"phan-trang-tim-kiem"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						},
+						{
+							"key": "search",
+							"value": "H"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload image location",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken\n}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "location",
+							"type": "file",
+							"src": "/Users/lyminhnhan/Desktop/naruto.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{domain}}/location/upload-hinh-vitri?maViTri=2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"location",
+						"upload-hinh-vitri"
+					],
+					"query": [
+						{
+							"key": "maViTri",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "946f3e94-a625-4ff6-8ce6-72e98817692f",
+		"name": "Room",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40537877"
+	},
+	"item": [
+		{
+			"name": "Create room",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0MTg4NjUyNCwiZXhwIjoxNzQxOTcyOTI0fQ.NzFox9v-HsCEhF0islloPu6Crit45k8Z9Yo64gwHo24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ten_phong\" : \"Phong VIP\",\n    \"ban_la\" : \"true\",\n    \"ma_vi_tri\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/room/",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"room",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list room",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0MTg4NjUyNCwiZXhwIjoxNzQxOTcyOTI0fQ.NzFox9v-HsCEhF0islloPu6Crit45k8Z9Yo64gwHo24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/room/",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"room",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get room by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken\n}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/room/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"room",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update room by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0MTg4NjUyNCwiZXhwIjoxNzQxOTcyOTI0fQ.NzFox9v-HsCEhF0islloPu6Crit45k8Z9Yo64gwHo24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ten_phong\" : \"VIP\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/room/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"room",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete room by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc0MTg4NjUyNCwiZXhwIjoxNzQxOTcyOTI0fQ.NzFox9v-HsCEhF0islloPu6Crit45k8Z9Yo64gwHo24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/room/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"room",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get room by location id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken\n}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/room/lay-phong-theo-vi-tri/?maViTri=2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"room",
+						"lay-phong-theo-vi-tri",
+						""
+					],
+					"query": [
+						{
+							"key": "maViTri",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pagination",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken\n}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "page",
+						"value": "1",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "pageSize",
+						"value": "20",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "search",
+						"value": "J",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/room/phan-trang-tim-kiem?page=1&pageSize=20&search=V",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"room",
+						"phan-trang-tim-kiem"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "20"
+						},
+						{
+							"key": "search",
+							"value": "V"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload image room",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken\n}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "room",
+							"type": "file",
+							"src": "/Users/lyminhnhan/Desktop/naruto.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{domain}}/room/upload-hinh-phong?maPhong=1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"room",
+						"upload-hinh-phong"
+					],
+					"query": [
+						{
+							"key": "maPhong",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
